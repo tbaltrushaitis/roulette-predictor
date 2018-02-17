@@ -1,0 +1,42 @@
+{   "name": "roulette-predictor"
+  , "version": "0.0.1"
+  , "title": "Online Roulette Predictor"
+  , "description": "Online Casino Roulette Analyzer and Predictor"
+  , "keywords": [
+        "casino"
+      , "roulette"
+      , "predictor"
+      , "javascript casino analyzer"
+    ]
+  , "homepage": "http://roulette.gsm-center.com.ua"
+  , "author": {
+        "name": "Baltrushaitis Tomas"
+      , "url": "https://github.com/tbaltrushaitis"
+    }
+  , "licenses": [
+      {   "type": "MIT"
+        , "url": "http://tbaltrushaitis.mit-license.org/"
+      }
+    ]
+  , "scripts": {
+      "build": "gulp build"
+    }
+  , "repository": {
+        "type": "git"
+      , "url": "https://github.com/tbaltrushaitis/roulette-predictor.git"
+    }
+  , "main": "index.html"
+  , "dependencies": {
+        "admin-lte": "~2.3.2"
+      , "animate.css": "~3.5.1"
+      , "bootstrap": "~3.3.7"
+      , "font-awesome": "~4.7.0"
+      , "jquery": "~3.3.1"
+      , "jquery-tmpl": "*"
+      , "noty": "~2.3.8"
+      , "requirejs": "~2.3.5"
+      , "underscore": "~1.8.3"
+    }
+  , "devDependencies": {
+    }
+}

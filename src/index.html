@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <!--/ Basic Page Needs
+  ========================================================================= /-->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Casino Roulette Predictor</title>
+
+  <!--/ Metas
+  ========================================================================= /-->
+  <meta name="title" content="Roulette Analyzer" />
+  <meta name="description" content="Casino Roulette Predictor" />
+  <meta name="keywords" content="roulette, casino, predictor, roulette predictor, casino helper, roulette helper, казино, рулетка, анализатор рулетки, предсказатель рулетки" />
+  <meta name="author" content="Baltrushaitis Tomas <tbaltrushaitis@gmail.com>" />
+  <meta name="language" content="en" />
+  <meta name="robots" content="index, follow" />
+
+  <!--/ Metas for Crawlers
+  ========================================================================= /-->
+  <meta property="og:title" content="Roulette Predictor" />
+  <meta property="og:image" content="assets/img/European_Roulette_wheel.png" />
+  <meta property="og:site_name" content="Roulette Analyzer" />
+  <meta property="og:description" content="Roulette Analyzer and Predictor" />
+
+  <!--/ Mobile Specific Metas
+  ========================================================================= /-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!--/ CSS
+  ========================================================================= /-->
+  <!--/ BOOTSTRAP STYLE SHEET /-->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <!--/ FONT-AWESOME STYLE SHEET FOR BEAUTIFUL ICONS /-->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <!--/ CUSTOM STYLES /-->
+  <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="assets/css/AdminLTE.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+
+  <!--/ Favicon
+  ========================================================================= /-->
+  <link href="assets/img/Casino-32.ico" type="image/x-icon" rel="icon" />
+  <link href="assets/img/Casino-32.ico" type="image/x-icon" rel="shortcut icon" />
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hide" href="#">Analizer</a>
+        <a href="#" id="btn-add-predictor" class="navbar-brand"><i class="fa fa-1x fa-plus"></i>&nbsp;&nbsp;Widget</a>
+        <a href="#" id="btn-grid-clear" class="navbar-brand"><i class="fa fa-1x fa-recycle"></i>&nbsp;&nbsp;Clear</a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#" id="btn-add-predictor-2" class="navbar-btn1 hide"><i class="fa fa-1x fa-plus"></i>&nbsp;&nbsp;Widget</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-home fa-2x"></i></a></li>
+          <li><a href="#" id="btn-save-predictors"><i class="fa fa-save fa-2x"></i></a></li>
+          <li><a href="#" id="btn-load-predictors"><i class="fa fa-folder-open fa-2x"></i></a></li>
+          <li><a href="#" class="hide">Stats</a></li>
+          <li><a href="#" class="hide">Help</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle hide" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!--/ NAVBAR CODE END /-->
+
+  <div class="container-fluid">
+
+    <!--/ PREDICTORS SECTION /-->
+    <section class="pad-50-0">
+      <div class="row" id="container-predictors"></div>
+    </section>
+    <!--/ SECTION END /-->
+
+    <!--/ GAMEPLAY SECTION /-->
+    <section class="section">
+
+      <div class="row">
+
+        <!--/ CONTENT COLUMN /-->
+        <div class="col-lg-8 col-md-12 col-sm-12">
+
+          <div class="row">
+
+            <!--/ CONTROLS /-->
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+
+              <!--/ ROULETTE BOARD /-->
+              <div id="box-roulette-board" class="box box-primary">
+                <div class="box-header with-border hide">
+                  <h4 class="box-title"><i class="fa fa-dashboard"></i></h4>
+                  <div class="box-tools pull-right">
+                    <a href="#box-roulette-board .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                      <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" id="btn-testPlay" class="btn pull-right btn-box-tool" role="button" >
+                      <i class="fa fa-wrench"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="box-body collapse in">
+                  <div class="btn-group" id="roulette-board" role="group" aria-label="rlteBoard"></div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+              <!--/ GAME STATS TABLE /-->
+              <div id="box-game-stats" class="box box-primary">
+                <div class="box-header with-border">
+                  <h4 class="box-title text-blue">
+                    <i class="fa fa-pie-chart"></i>
+                    [<span id="step-num-stats"></span>]&nbsp;
+                    <span>Stats</span>
+                  </h4>
+                  <div class="box-tools pull-right">
+                    <a href="#box-game-stats .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                      <i class="fa fa-minus"></i>
+                    </a>
+                    <a href="#" id="btn-log-stats" class="btn pull-right btn-box-tool" role="button" >
+                      <i class="fa fa-fire"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="box-body collapse in">
+                  <table class="table table-striped1 table-hover table-bordered table-condensed" id="table-game-stats">
+                    <thead class="text-center">
+                      <tr class="bg-navy disabled text-center">
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Count</th>
+                        <th>%</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-center" id="stat-rows-container">
+                      <tr id="stat-row-reds" class="bg-red">
+                        <td class="t-posnum">Red</td>
+                        <td class="t-title text-left">Red</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-blacks" class="bg-black">
+                        <td class="t-posnum">Black</td>
+                        <td class="t-title text-left">Black</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-zeros" class="bg-green">
+                        <td class="t-posnum">Zero</td>
+                        <td class="t-title text-left">Zero</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-evens" class="bg-gray1 disabled1">
+                        <td class="t-posnum">Even</td>
+                        <td class="t-title text-left">Even</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-odds" class="bg-gray1 disabled1">
+                        <td class="t-posnum">Odd</td>
+                        <td class="t-title text-left">Odd</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-lows" class="bg-gray1 disabled1">
+                        <td class="t-posnum">Small</td>
+                        <td class="t-title text-left">1 - 18</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                      <tr id="stat-row-highs" class="bg-gray1 disabled1">
+                        <td class="t-posnum">Big</td>
+                        <td class="t-title text-left">19 - 36</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                    </tbody>
+                    <tfoot class="text-center">
+                      <tr id="stat-row-rounds" class="bg-navy disabled">
+                        <td class="t-posnum"></td>
+                        <td class="t-title text-left">Total</td>
+                        <td class="t-value">n/a</td>
+                        <td class="t-perc"></td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /#box-game-stats -->
+
+              <!--/ STEP KNOB GAUGE /-->
+              <div id="box-step-info" class="box box-success hide">
+                <div class="box-header with-border">
+                  <h3 class="box-title">[<span id="step-num"></span>]&nbsp;Current step</h3>
+                  <div class="box-tools pull-right">
+                    <a href="#box-step-info .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                      <i class="fa fa-minus"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="box-body collapse in">
+                  <div class="" id="board-stats" role="group">
+                    <!--/ <input id="win_gauge" type="text" class="knob" value="30" data-skin="tron" data-cursor=true data-angleOffset="180" data-displayPrevious="true" data-thickness="0.1" data-width="100%" data-height="100%" data-fgColor="#00a65a"> </input> /-->
+                    <input id="win_gauge" type="text" class="knob" value="-1" data-skin="tron" data-displayPrevious="true" data-thickness="0.3" data-fgColor="#00a65a">
+                  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div>
+
+            <!--/ STATS CONTAINER /-->
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-6">
+
+              <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                  <!--/ FREQUENCIES GRID /-->
+                  <div class="row">
+                    <div id="box-freqs-grid" class="box box-primary">
+                      <div class="box-header with-border">
+                          <h4 class="box-title text-blue">
+                            <i class="fa fa-signal"></i>
+                            [<span id="step-freqs-stats"></span>]&nbsp;
+                            <span>Frequency</span>
+                          </h4>
+                          <div class="box-tools pull-right">
+                            <a href="#box-freqs-grid .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                              <i class="fa fa-minus"></i>
+                            </a>
+                          </div>
+                      </div>
+                      <div class="box-body collapse in">
+                        <table class="table table-hover table-bordered table-condensed" id="table-game-freqs">
+                          <thead class="text-center" id="freqs-rows-header">
+                            <tr class="bg-navy disabled">
+                              <th>Step</th>
+                              <th>Count</th>
+                              <th>%</th>
+                            </tr>
+                          </thead>
+                          <tbody class="text-center" id="freqs-rows-container"></tbody>
+                          <tfoot class="text-center" id="freqs-rows-total"></tfoot>
+                        </table>
+                      </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                  </div>
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+                  <!--/ GAMEPLAY TABLE /-->
+                  <div id="box-game-records" class="box box-primary">
+                    <div class="box-header with-border">
+                      <h4 class="box-title text-blue">
+                        <i class="fa fa-list-alt"></i>
+                        [<span id="records-num-holder"></span>]&nbsp;
+                        <span>Game log</span>
+                      </h4>
+                      <div class="box-tools pull-right">
+                        <a href="#box-game-records .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                          <i class="fa fa-minus"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box-body collapse in">
+                      <table class="table table-striped table-hover table-bordered table-condensed" id="table-game-records">
+                        <thead class="text-center">
+                          <tr class="bg-navy disabled">
+                            <th>#</th>
+                            <th>Win</th>
+                            <th>Step</th>
+                            <th>Route</th>
+                            <th>Text</th>
+                          </tr>
+                        </thead>
+                        <tbody id="win-container" class="text-center"></tbody>
+                        <tfoot class="text-center hide">
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div><!-- /.box-body -->
+                  </div><!-- /#box-game-stats -->
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--/ RIGHT SIDEBAR /-->
+        <div class="col-lg-4 col-md1-4 col-sm1-4 hidden-md-0 hidden-sm hidden-xs">
+
+<!--      <div class="row">
+            <div class="col-md-12"> -->
+
+              <!--/ ROULETTE EUROPEAN IMAGE /-->
+              <div id="box-roul-euro-image" class="box box-solid box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title"><i class="fa fa-2x fa-info-circle-o"></i>&nbsp;&nbsp;Euro</h3>
+                  <div class="box-tools pull-right">
+                    <a href="#box-roul-euro-image .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                      <i class="fa fa-minus"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="box-body collapse in">
+                  <img src="assets/img/European_Roulette_wheel.png" class="img-rounded img-responsive" />
+                </div><!-- /.box-body -->
+              </div><!--/ #box-roul-euro-image /-->
+
+<!--        </div>
+          </div> -->
+
+
+              <div class="row hide-0">
+                <div class="col-md-12">
+
+                  <!--/ CHART.JS: RANGES FREQUENCIES /-->
+                  <div id="box-step-freqs" class="box box-success">
+                    <div class="box-header with-border">
+                      <h3 class="box-title text-success">
+                        <i class="fa fa-bar-chart"></i>
+                        [<span id="step-num-freq"></span>]&nbsp;
+                        <span>Frequency</span>
+                      </h3>
+                      <div class="box-tools pull-right">
+                        <a href="#box-step-freqs .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                          <i class="fa fa-minus"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="box-body collapse in">
+                      <div class="chart">
+                        <canvas id="chart-steps-freqs" style="height: 130px"></canvas>
+                      </div>
+                    </div><!-- /.box-body -->
+                  </div><!-- /.box -->
+
+                </div>
+              </div>
+
+            </div>
+
+        </div><!--/ ROW END /-->
+
+      </section>
+      <!--/ SECTION END /-->
+
+    <!--/ INFORMATION /-->
+    <section id="information" class="hide-0">
+      <div class="row">
+
+        <div class="col-sm-8 col-xs-6">
+
+          <!--/ ROULETTES INFORMATION /-->
+          <div id="box-rouls-info" class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title"><i class="fa fa-2x fa-info-circle-o"></i>&nbsp;&nbsp;Information</h3>
+              <div class="box-tools pull-right">
+                <a href="#box-rouls-info .box-body" class="btn pull-right btn-box-tool" role="button" data-toggle="collapse" data-widget="collapse" aria-expanded="true" aria-controls="collapse-1">
+                  <i class="fa fa-minus"></i>
+                </a>
+              </div>
+            </div>
+            <div class="box-body collapse">
+              <div class="">
+                <img src="assets/img/american_vs_european_roulette.gif" class="img-rounded img-responsive" />
+              </div>
+
+              <hr style="#000066" />
+              <h4 class="box-title2"><i class="fa fa-2x fa-info-circle-o"></i>&nbsp;&nbsp;Linear values:</h4>
+              <div class="">
+                <strong>European:</strong><br />
+                <p class="small">
+                  <span id="roulette-european-list">European roulette board type Sequence.</span>
+                </p>
+              </div>
+
+              <div class="">
+                <strong>American:</strong><br />
+                <p class="small">
+                  <span id="roulette-american-list">American roulette board type Sequence.</span>
+                </p>
+              </div>
+
+            </div><!-- /.box-body -->
+          </div><!--/ #box-rouls-info /-->
+
+        </div><!-- /.col-xs-6 -->
+
+        <div class="col-sm-4 col-xs-6"></div><!-- /.col-xs-6 -->
+
+      </div>
+    </section>
+    <!--/ SECTION END /-->
+
+  </div><!--/ CONTAINER END /-->
+
+  <!--/ GRID ROW /-->
+  <script id="tpl-win-sample" type="text/x-jquery-tmpl">
+    <tr class="">
+      <td>${posnum}</td>
+      <td class="bg-${color}">${win}</td>
+      <td>${steps}</td>
+      <td><i class="fa fa-rotate-${spin}"></i></td>
+      <td>${note}</td>
+    </tr>
+  </script>
+
+  <!--/ BOARD BUTTON /-->
+  <script id="tpl-board-item" type="text/x-jquery-tmpl">
+    <div class="col-xs-2 board-item" id="brd-item-${id}">
+      <a href="#" data-id="${id}" data-win="${win}" class="btn btn-brd bg-${color}">${win}</a>
+    </div>
+  </script>
+
+  <!--/ WIN CARD /-->
+  <script id="tpl-win-card" type="text/x-jquery-tmpl">
+    <span><a href="#" class="btn btn-card btn-xs bg-${color}">${win}</a></span>
+  </script>
+
+  <!--/ PREDICTOR WRAPPER /-->
+  <script id="tpl-predictor-wrapper" type="text/x-jquery-tmpl">
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 predictor-wrapper"></div>
+  </script>
+
+  <!--/ PREDICTOR BOX /-->
+  <script id="tpl-predictor-box" type="text/x-jquery-tmpl">
+    <div class="box box-solid box-primary box-stats-predictor grow" id="w-predictor-${uuid}">
+
+      <div class="box-body center">
+        <!--/ PREDICTED VALUE /-->
+        <div class="" id="w-home-${uuid}">
+          <label class="w-value w-value-left text-center pull-left">n/a</label>
+          <label class="w-value w-value-right text-center pull-right">n/a</label>
+        </div>
+      </div><!-- /.box-body -->
+
+      <div class="box-header text-center micro">
+
+        <!--/ STAGE /-->
+        <input id="w-stage-${uuid}" type="text" class="w-stage w-value pull-left" defaultValue="0" value="${stage}" maxlength=2 min="1" size=4 />
+        <!--/ WIN /-->
+        <span class="w-value w-value-win text-center">--</span>
+        <!--/ STEPS /-->
+        <input id="w-steps-${uuid}" type="text" class="w-steps w-value pull-right" defaultValue="1" value="${steps}" maxlength=2 min="1" size=4 />
+
+      </div><!-- /.box-header -->
+
+    </div><!-- /.box -->
+  </script>
+
+  <!--/ FREQS GRID ROW /-->
+  <script id="tpl-freqs-grid-row" type="text/x-jquery-tmpl">
+    <tr class="${cls}">
+      <td class="f-title">${step}</td>
+      <td class="f-value">${steps}</td>
+      <td class="f-perc">${perc}</td>
+    </tr>
+  </script>
+
+  <!--/ REQUIRED SCRIPTS /-->
+  <script src="assets/js/lib/require.js" data-main="assets/js/app-config-require.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{   "animation": false
+  , "animationSteps": 1
+
+  , "showScale": true
+  , "scaleOverride": true
+  , "scaleBeginAtZero": false
+  , "scaleFontSize": 10
+  , "scaleShowLabels": true
+  , "scaleShowGridLines": true
+  , "scaleGridLineColor": "rgba(0,0,0,.05)"
+  , "scaleGridLineWidth": 1
+  , "scaleShowHorizontalLines": true
+  , "scaleShowVerticalLines": false
+
+  , "barShowStroke": false
+  , "barStrokeWidth": 0
+  , "barValueSpacing": 1
+  , "barDatasetSpacing": 0
+
+  , "responsive": false
+  , "maintainAspectRatio": false
+  , "showTooltips": true
+  , "datasetFill": false
+
+  , "fillColor": "rgba(60,141,188,0.9)"
+  , "strokeColor": "#00a65a"
+  , "pointColor": "#00a65a"
+  , "pointStrokeColor": "rgba(60,141,188,1)"
+  , "pointHighlightFill": "#fff"
+  , "pointHighlightStroke": "rgba(60,141,188,1)"
+}

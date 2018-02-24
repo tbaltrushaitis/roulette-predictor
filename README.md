@@ -1,11 +1,8 @@
 # Roulette Predictor #
 
-
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=plastic)](https://github.com/conventional-changelog/standard-version)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/tbaltrushaitis/roulette-predictor/blob/master/LICENSE)
-[![Dependency Status](https://david-dm.org/tbaltrushaitis/roulette-predictor.svg?theme=shields.io)](https://david-dm.org/tbaltrushaitis/roulette-predictor)
-[![Build Status](https://img.shields.io/travis/tbaltrushaitis/roulette-predictor/master.svg)](https://travis-ci.org/tbaltrushaitis/roulette-predictor)
-[![Coverage Status](http://img.shields.io/coveralls/tbaltrushaitis/roulette-predictor/master.svg)](https://coveralls.io/r/tbaltrushaitis/roulette-predictor)
+[![Dependencies Status](https://david-dm.org/tbaltrushaitis/roulette-predictor.svg?theme=shields.io)](https://david-dm.org/tbaltrushaitis/roulette-predictor)
 [![Contributors Count](https://img.shields.io/github/contributors/tbaltrushaitis/roulette-predictor.svg)](https://github.com/tbaltrushaitis/roulette-predictor/graphs/contributors)
 
 ![Gameplay Screenshot](assets/img/gameplay-1928-won.png)

@@ -2,8 +2,8 @@
   , "scaleShowGridLines": true
   , "scaleGridLineColor": "rgba(0,0,0,.05)"
   , "scaleGridLineWidth": 1
-  , "scaleShowHorizontalLines: true
-  , "scaleShowVerticalLines: true
+  , "scaleShowHorizontalLines": true
+  , "scaleShowVerticalLines": true
   , "barShowStroke": false
   , "barStrokeWidth": 0
   , "barValueSpacing": 0

@@ -1,7 +1,7 @@
 /*  ASSETS/JS/app-starter.js  */
 
 require(['jquery', 'appController'], function ($) {
-  console.timeStamp('MODULES LOADED)';
+  console.timeStamp('MODULES LOADED');
 });
 
 define([
@@ -16,7 +16,8 @@ define([
 
   $.when(Controller)
    .then(function (loController) {
-      console.timeStamp('START CONTROLLER');
+      console.log('before: START CONTROLLER');
       loController.start();
+      console.log('after: START CONTROLLER');
   });
 });

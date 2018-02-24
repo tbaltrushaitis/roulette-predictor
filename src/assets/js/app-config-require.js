@@ -1,4 +1,4 @@
-/*  JS/app-config-require.js  */
+/*  ASSETS/JS/app-config-require.js  */
 
 ;(function (require) {
 
@@ -27,14 +27,14 @@
         }
       }
     , paths: {
-          jquery: 'lib/jquery'
-        , underscore: 'lib/underscore'
-        , bootstrap: 'lib/bootstrap'
-        , tmpl: 'lib/jquery.tmpl'
-        , noty: 'plugins/jquery.noty'
-        , knob: 'plugins/jquery.knob'
+          jquery: 'lib/jquery.min'
+        , underscore: 'lib/underscore.min'
+        , bootstrap: 'lib/bootstrap.min'
+        , tmpl: 'lib/jquery.tmpl.min'
+        , noty: 'lib/jquery.noty.packaged.min'
+        , knob: 'lib/jquery.knob.min'
      // , sparkline: 'plugins/jquery.sparkline'
-        , Chart: 'plugins/Chart'
+        , Chart: 'lib/Chart.min'
         , functions: 'app/functions'
         , appController: 'app/controllers/appController'
       }
@@ -52,8 +52,8 @@
           }
         , noty: ['jquery']
         , functions: ['jquery', 'underscore', 'noty']
-        // , appController: ['jquery', 'underscore', 'knob', 'sparkline', 'Chart']
         , appController: ['jquery', 'underscore', 'knob', 'Chart']
+        // , appController: ['jquery', 'underscore', 'knob', 'sparkline', 'Chart']
       }
     , deps: [
           'jquery'

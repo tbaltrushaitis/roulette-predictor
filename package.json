@@ -1,6 +1,6 @@
 {   "name": "roulette-predictor"
   , "version": "0.0.1"
-  , "title": "Online Roulette Predictor"
+  , "title": "Casino Roulette Predictor"
   , "description": "Online Casino Roulette Analyzer and Predictor"
   , "keywords": [
         "casino"
@@ -8,7 +8,7 @@
       , "predictor"
       , "javascript casino analyzer"
     ]
-  , "homepage": "http://roulette.gsm-center.com.ua"
+  , "homepage": "http://bit.ly/roulette-predictor"
   , "author": {
         "name": "Baltrushaitis Tomas"
       , "url": "https://github.com/tbaltrushaitis"
@@ -27,16 +27,106 @@
     }
   , "main": "index.html"
   , "dependencies": {
-        "admin-lte": "~2.3.2"
-      , "animate.css": "~3.5.1"
-      , "bootstrap": "~3.3.7"
-      , "font-awesome": "~4.7.0"
-      , "jquery": "~3.3.1"
-      , "jquery-tmpl": "*"
-      , "noty": "~2.3.8"
-      , "requirejs": "~2.3.5"
-      , "underscore": "~1.8.3"
+        "bower":            "^1.8.2"
+      , "config":           "^1.29.4"
+      , "dateformat":       "^3.0.2"
+      , "gulp":             "^3.9.1"
+      , "gulp-cli":         "^2.0.1"
+      , "gulp-changed":     "^3.2.0"
+      , "gulp-clean-css":   "^3.9.2"
+      , "gulp-filter":      "^5.1.0"
+      , "gulp-if":          "^2.0.2"
+      , "gulp-rename":      "^1.2.2"
+      , "gulp-directory-sync": "^1.2.3"
+      , "gulp-require-tasks": "^1.2.1"
+      , "gulp-uglify":      "^3.0.0"
+      , "main-bower-files": "^2.13.1"
+      , "merge-stream":     "^1.0.0"
+      , "read-config":      "^2.0.0"
+      , "vinyl-paths":      "^2.1.0"
     }
   , "devDependencies": {
+    }
+  , "options": {
+      "bower": {
+          "debugging": true
+        , "paths": {
+              "bowerDirectory": "bower_modules"
+            , "bowerrc":        ".bowerrc"
+            , "bowerJson":      "bower.json"
+          }
+      }
+    , "clean": {
+        "debug":         true
+      , "processImport": true
+      }
+    , "exec": {
+          "continueOnError": false
+        , "pipeStdout":      false
+      }
+    , "file": {
+          "encoding": "utf8"
+        , "flag":     "r"
+      }
+    , "minify": {
+        "suffix": ".min"
+      }
+    , "reporting": {
+          "err":    true
+        , "stderr": true
+        , "stdout": true
+      }
+    , "sync": {
+          "printSummary": true
+        , "nodelete":     true
+      }
+    , "uglify": {
+        "compress": {
+            "sequences":     true
+          , "properties":    true
+          , "dead_code":     true
+          , "drop_debugger": true
+          , "unsafe":        false
+          , "conditionals":  true
+          , "comparisons":   true
+          , "evaluate":      true
+          , "booleans":      true
+          , "loops":         true
+          , "unused":        true
+          , "hoist_funs":    true
+          , "hoist_vars":    false
+          , "if_return":     true
+          , "join_vars":     true
+          , "cascade":       true
+          , "side_effects":  true
+          , "warnings":      true
+          , "global_defs":   {}
+        }
+      , "mangle": false
+      , "output": {
+            "indent_start":  0
+          , "indent_level":  4
+          , "quote_keys":    false
+          , "ascii_only":    false
+          , "inline_script": false
+          , "width":         80
+          , "max_line_len":  32000
+          , "beautify":      false
+          , "source_map":    null
+          , "bracketize":    false
+          , "comments":      false
+          , "semicolons":    true
+        }
+      }
+    , "watch": {
+          "ignoreInitial": false
+        , "verbose":       true
+        , "readDelay":     100
+      }
+    , "iopts": {
+          "showHidden": false
+        , "depth":      4
+        , "colors":     true
+      }
     }
 }

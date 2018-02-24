@@ -1,0 +1,11 @@
+{   "app_url": "http://roulette-predictor.local"
+  , "engine": {
+        "name":    "custom"
+      , "vendor":  "roulette-predictor"
+      , "version": "0.0.1"
+      , "repository": {
+            "type": "git"
+          , "url":  "https://github.com/tbaltrushaitis/roulette-predictor"
+        }
+    }
+}

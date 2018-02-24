@@ -1,0 +1,23 @@
+##  ------------------------------------------------------------------------  ##
+##                        Create application BANNER                           ##
+##  ------------------------------------------------------------------------  ##
+
+include ./bin/.bash_colors
+
+.PHONY: logo
+
+logo:
+	@ echo ${BCyan}---------------------------------------------------------${NC};
+	@ figlet-toilet --termwidth \
+									--font big \
+									--filter border \
+									--filter gay \
+									$(shell echo " ${APP_NAME} " | tr [:lower:] [:upper:]) \
+									-E "utf8" \
+									-k \
+									> ${APP_LOGO} \
+	&& if [ -f "${APP_LOGO}" ]; then cat "${APP_LOGO}"; fi ;
+	@ echo ${BYellow}BANNER created${NC};
+	@ echo ${BCyan}---------------------------------------------------------${NC};
+
+##  ------------------------------------------------------------------------  ##

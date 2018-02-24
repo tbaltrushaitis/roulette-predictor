@@ -1,6 +1,6 @@
 {   "name": "roulette-predictor"
   , "description": "Online Casino Roulette Analyzer and Predictor"
-  , "main": "app-config-require.js"
+  , "main": "Makefile"
   , "moduleType": [
         "amd"
       , "globals"
@@ -26,14 +26,72 @@
       , "tests"
     ]
   , "dependencies": {
-        "animate.css": "~3.5.1"
-      , "bootstrap": "~3.3.7"
+        "admin-lte":    "^2.4.3"
+      , "animate.css":  "~3.5.2"
+      , "bootstrap":    "~3.3.7"
+      , "chart.js":     "^2.7.1"
       , "font-awesome": "~4.7.0"
-      , "jquery": "~3.3.1"
-      , "jquery-tmpl": "*"
-      , "noty": "~2.3.8"
-      , "requirejs": "~2.3.5"
-      , "underscore": "~1.8.3"
+      , "jquery":       "~3.3.1"
+      , "jquery-knob":  "^1.2.13"
+      , "jquery-tmpl":  "*"
+      , "noty":         "~2.3.11"
+      , "requirejs":    "~2.3.5"
+      , "underscore":   "~1.8.3"
     }
   , "devDependencies": {}
+  , "overrides": {
+      "admin-lte": {
+        "main": [
+            "dist/**"
+          , "!**/demo.*"
+          , "!**/dashboard2.*"
+          , "!**/*.less"
+          , "!**/*.min.js"
+        ]
+      }
+    , "bootstrap": {
+        "main": [
+            "dist/**/*.*"
+          , "!**/*.less"
+          , "!**/npm.js"
+          , "!**/bootstrap-theme.css"
+          , "!bootstrap-theme.css"
+          , "!dist/css/bootstrap-theme.css"
+          , "!**/*.min.js"
+        ]
+      }
+    , "chart.js": {
+        "main": [
+          "dist/**/*.js"
+        ]
+      }
+    , "font-awesome": {
+        "main": [
+            "fonts/*"
+          , "css/*.css"
+          , "!css/*.min.css"
+        ]
+      }
+    , "jquery-tmpl": {
+        "main": [
+          "*.js"
+        ]
+      }
+    }
+  , "group": {
+        "libs": [
+            "bootstrap"
+          , "chart.js"
+          , "jquery"
+          , "jquery-knob"
+          , "jquery-tmpl"
+          , "noty"
+          , "requirejs"
+          , "underscore"
+        ]
+      , "fonts": [
+          "font-awesome"
+        ]
+      , "front": ["libs", "fonts"]
+    }
 }

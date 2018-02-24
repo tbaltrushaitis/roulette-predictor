@@ -1,6 +1,5 @@
 # Roulette Predictor #
 
-
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=plastic)](https://github.com/conventional-changelog/standard-version)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/tbaltrushaitis/roulette-predictor/blob/master/LICENSE)
 [![Dependencies Status](https://david-dm.org/tbaltrushaitis/roulette-predictor.svg?theme=shields.io)](https://david-dm.org/tbaltrushaitis/roulette-predictor)

@@ -2,8 +2,6 @@
 
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=plastic)](https://github.com/conventional-changelog/standard-version)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/tbaltrushaitis/roulette-predictor/blob/master/LICENSE)
-[![Dependencies Status](https://david-dm.org/tbaltrushaitis/roulette-predictor.svg?theme=shields.io)](https://david-dm.org/tbaltrushaitis/roulette-predictor)
-[![Contributors Count](https://img.shields.io/github/contributors/tbaltrushaitis/roulette-predictor.svg)](https://github.com/tbaltrushaitis/roulette-predictor/graphs/contributors)
 
 ![Gameplay Screenshot](assets/img/gameplay-1928-won.png)
 
@@ -35,8 +33,6 @@ $ APP_NAME=roulette-predictor \
 $ make
 ```
 
-> :calendar: Developed in **March 2016**
-
 ---
 
 ### :link: More Info ###
@@ -48,5 +44,7 @@ $ make
  - [Cross-host linking containers](https://docs.docker.com/engine/admin/ambassador_pattern_linking.md)
 
 ---
+
+> :calendar: Developed in **March 2016**
 
 :scorpius:

@@ -1,457 +1,682 @@
-{ "roulettes": {
-    "european": [
-        {   "id": 1
-          , "pos": 0
-          , "win": "0"
-          , "color": "green"
-          , "odd": null
-        }
-      , {   "id": 2
-          , "pos": 1
-          , "win": "32"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 3
-          , "pos": 2
-          , "win": "15"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 4
-          , "pos": 3
-          , "win": "19"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 5
-          , "pos": 4
-          , "win": "4"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 6
-          , "pos": 5
-          , "win": "21"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 7
-          , "pos": 6
-          , "win": "2"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 8
-          , "pos": 7
-          , "win": "25"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 9
-          , "pos": 8
-          , "win": "17"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 10
-          , "pos": 9
-          , "win": "34"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 11
-          , "pos": 10
-          , "win": "6"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 12
-          , "pos": 11
-          , "win": "27"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 13
-          , "pos": 12
-          , "win": "13"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 14
-          , "pos": 13
-          , "win": "36"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 15
-          , "pos": 14
-          , "win": "11"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 16
-          , "pos": 15
-          , "win": "30"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 17
-          , "pos": 16
-          , "win": "8"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 18
-          , "pos": 17
-          , "win": "23"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 19
-          , "pos": 18
-          , "win": "10"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 20
-          , "pos": 19
-          , "win": "5"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 21
-          , "pos": 20
-          , "win": "24"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 22
-          , "pos": 21
-          , "win": "16"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 23
-          , "pos": 22
-          , "win": "33"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 24
-          , "pos": 23
-          , "win": "1"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 25
-          , "pos": 24
-          , "win": "20"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 26
-          , "pos": 25
-          , "win": "14"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 27
-          , "pos": 26
-          , "win": "31"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 28
-          , "pos": 27
-          , "win": "9"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 29
-          , "pos": 28
-          , "win": "22"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 30
-          , "pos": 29
-          , "win": "18"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 31
-          , "pos": 30
-          , "win": "29"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 32
-          , "pos": 31
-          , "win": "7"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 33
-          , "pos": 32
-          , "win": "28"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 34
-          , "pos": 33
-          , "win": "12"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 35
-          , "pos": 34
-          , "win": "35"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 36
-          , "pos": 35
-          , "win": "3"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 37
-          , "pos": 36
-          , "win": "26"
-          , "color": "black"
-          , "odd": false
-        }
-    ]
-  , "american": [
-        {   "id": 1
-          , "pos": 0
-          , "win": "0"
-          , "color": "green"
-          , "odd": null
-        }
-      , {   "id": 2
-          , "pos": 1
-          , "win": "28"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 3
-          , "pos": 2
-          , "win": "9"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 4
-          , "pos": 3
-          , "win": "26"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 5
-          , "pos": 4
-          , "win": "30"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 6
-          , "pos": 5
-          , "win": "11"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 7
-          , "pos": 6
-          , "win": "7"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 8
-          , "pos": 7
-          , "win": "20"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 9
-          , "pos": 8
-          , "win": "32"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 10
-          , "pos": 9
-          , "win": "17"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 11
-          , "pos": 10
-          , "win": "5"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 12
-          , "pos": 11
-          , "win": "22"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 13
-          , "pos": 12
-          , "win": "34"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 14
-          , "pos": 13
-          , "win": "15"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 15
-          , "pos": 14
-          , "win": "3"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 16
-          , "pos": 15
-          , "win": "24"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 17
-          , "pos": 16
-          , "win": "36"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 18
-          , "pos": 17
-          , "win": "13"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 19
-          , "pos": 18
-          , "win": "1"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 20
-          , "pos": 19
-          , "win": "00"
-          , "color": "green"
-          , "odd": null
-        }
-      , {   "id": 21
-          , "pos": 20
-          , "win": "27"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 22
-          , "pos": 21
-          , "win": "10"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 23
-          , "pos": 22
-          , "win": "25"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 24
-          , "pos": 23
-          , "win": "29"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 25
-          , "pos": 24
-          , "win": "12"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 26
-          , "pos": 25
-          , "win": "8"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 27
-          , "pos": 26
-          , "win": "19"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 28
-          , "pos": 27
-          , "win": "31"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 29
-          , "pos": 28
-          , "win": "18"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 30
-          , "pos": 29
-          , "win": "6"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 31
-          , "pos": 30
-          , "win": "21"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 32
-          , "pos": 31
-          , "win": "33"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 33
-          , "pos": 32
-          , "win": "16"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 34
-          , "pos": 33
-          , "win": "4"
-          , "color": "black"
-          , "odd": false
-        }
-      , {   "id": 35
-          , "pos": 34
-          , "win": "23"
-          , "color": "red"
-          , "odd": true
-        }
-      , {   "id": 36
-          , "pos": 35
-          , "win": "35"
-          , "color": "black"
-          , "odd": true
-        }
-      , {   "id": 37
-          , "pos": 36
-          , "win": "14"
-          , "color": "red"
-          , "odd": false
-        }
-      , {   "id": 38
-          , "pos": 37
-          , "win": "2"
-          , "color": "black"
-          , "odd": false
-        }
-    ]
+{
+  "roulettes": {
+      "european": [
+          {   "id": 1
+            , "pos": 0
+            , "win": "0"
+            , "color": "green"
+            , "odd": null
+          }
+        , {   "id": 2
+            , "pos": 1
+            , "win": "32"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 3
+            , "pos": 2
+            , "win": "15"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 4
+            , "pos": 3
+            , "win": "19"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 5
+            , "pos": 4
+            , "win": "4"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 6
+            , "pos": 5
+            , "win": "21"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 7
+            , "pos": 6
+            , "win": "2"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 8
+            , "pos": 7
+            , "win": "25"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 9
+            , "pos": 8
+            , "win": "17"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 10
+            , "pos": 9
+            , "win": "34"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 11
+            , "pos": 10
+            , "win": "6"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 12
+            , "pos": 11
+            , "win": "27"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 13
+            , "pos": 12
+            , "win": "13"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 14
+            , "pos": 13
+            , "win": "36"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 15
+            , "pos": 14
+            , "win": "11"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 16
+            , "pos": 15
+            , "win": "30"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 17
+            , "pos": 16
+            , "win": "8"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 18
+            , "pos": 17
+            , "win": "23"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 19
+            , "pos": 18
+            , "win": "10"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 20
+            , "pos": 19
+            , "win": "5"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 21
+            , "pos": 20
+            , "win": "24"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 22
+            , "pos": 21
+            , "win": "16"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 23
+            , "pos": 22
+            , "win": "33"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 24
+            , "pos": 23
+            , "win": "1"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 25
+            , "pos": 24
+            , "win": "20"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 26
+            , "pos": 25
+            , "win": "14"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 27
+            , "pos": 26
+            , "win": "31"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 28
+            , "pos": 27
+            , "win": "9"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 29
+            , "pos": 28
+            , "win": "22"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 30
+            , "pos": 29
+            , "win": "18"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 31
+            , "pos": 30
+            , "win": "29"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 32
+            , "pos": 31
+            , "win": "7"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 33
+            , "pos": 32
+            , "win": "28"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 34
+            , "pos": 33
+            , "win": "12"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 35
+            , "pos": 34
+            , "win": "35"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 36
+            , "pos": 35
+            , "win": "3"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 37
+            , "pos": 36
+            , "win": "26"
+            , "color": "black"
+            , "odd": false
+          }
+      ]
+    , "american": [
+          {   "id": 1
+            , "pos": 0
+            , "win": "0"
+            , "color": "green"
+            , "odd": null
+          }
+        , {   "id": 2
+            , "pos": 1
+            , "win": "28"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 3
+            , "pos": 2
+            , "win": "9"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 4
+            , "pos": 3
+            , "win": "26"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 5
+            , "pos": 4
+            , "win": "30"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 6
+            , "pos": 5
+            , "win": "11"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 7
+            , "pos": 6
+            , "win": "7"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 8
+            , "pos": 7
+            , "win": "20"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 9
+            , "pos": 8
+            , "win": "32"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 10
+            , "pos": 9
+            , "win": "17"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 11
+            , "pos": 10
+            , "win": "5"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 12
+            , "pos": 11
+            , "win": "22"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 13
+            , "pos": 12
+            , "win": "34"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 14
+            , "pos": 13
+            , "win": "15"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 15
+            , "pos": 14
+            , "win": "3"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 16
+            , "pos": 15
+            , "win": "24"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 17
+            , "pos": 16
+            , "win": "36"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 18
+            , "pos": 17
+            , "win": "13"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 19
+            , "pos": 18
+            , "win": "1"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 20
+            , "pos": 19
+            , "win": "00"
+            , "color": "green"
+            , "odd": null
+          }
+        , {   "id": 21
+            , "pos": 20
+            , "win": "27"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 22
+            , "pos": 21
+            , "win": "10"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 23
+            , "pos": 22
+            , "win": "25"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 24
+            , "pos": 23
+            , "win": "29"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 25
+            , "pos": 24
+            , "win": "12"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 26
+            , "pos": 25
+            , "win": "8"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 27
+            , "pos": 26
+            , "win": "19"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 28
+            , "pos": 27
+            , "win": "31"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 29
+            , "pos": 28
+            , "win": "18"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 30
+            , "pos": 29
+            , "win": "6"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 31
+            , "pos": 30
+            , "win": "21"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 32
+            , "pos": 31
+            , "win": "33"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 33
+            , "pos": 32
+            , "win": "16"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 34
+            , "pos": 33
+            , "win": "4"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 35
+            , "pos": 34
+            , "win": "23"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 36
+            , "pos": 35
+            , "win": "35"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 37
+            , "pos": 36
+            , "win": "14"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 38
+            , "pos": 37
+            , "win": "2"
+            , "color": "black"
+            , "odd": false
+          }
+      ]
+    , "simple": [
+          {   "id": 1
+            , "pos": 0
+            , "win": "0"
+            , "color": "green"
+            , "odd": null
+          }
+        , {   "id": 2
+            , "pos": 1
+            , "win": "1"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 3
+            , "pos": 2
+            , "win": "2"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 4
+            , "pos": 3
+            , "win": "3"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 5
+            , "pos": 4
+            , "win": "4"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 6
+            , "pos": 5
+            , "win": "5"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 7
+            , "pos": 6
+            , "win": "6"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 8
+            , "pos": 7
+            , "win": "7"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 9
+            , "pos": 8
+            , "win": "8"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 10
+            , "pos": 9
+            , "win": "9"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 11
+            , "pos": 10
+            , "win": "10"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 12
+            , "pos": 11
+            , "win": "11"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 13
+            , "pos": 12
+            , "win": "12"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 14
+            , "pos": 13
+            , "win": "13"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 15
+            , "pos": 14
+            , "win": "14"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 16
+            , "pos": 15
+            , "win": "15"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 17
+            , "pos": 16
+            , "win": "16"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 18
+            , "pos": 17
+            , "win": "17"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 19
+            , "pos": 18
+            , "win": "18"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 20
+            , "pos": 19
+            , "win": "19"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 21
+            , "pos": 20
+            , "win": "20"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 22
+            , "pos": 21
+            , "win": "21"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 23
+            , "pos": 22
+            , "win": "22"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 24
+            , "pos": 23
+            , "win": "23"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 25
+            , "pos": 24
+            , "win": "24"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 26
+            , "pos": 25
+            , "win": "25"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 27
+            , "pos": 26
+            , "win": "26"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 28
+            , "pos": 27
+            , "win": "27"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 29
+            , "pos": 28
+            , "win": "28"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 30
+            , "pos": 29
+            , "win": "29"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 31
+            , "pos": 30
+            , "win": "30"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 32
+            , "pos": 31
+            , "win": "31"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 33
+            , "pos": 32
+            , "win": "32"
+            , "color": "black"
+            , "odd": false
+          }
+        , {   "id": 34
+            , "pos": 33
+            , "win": "33"
+            , "color": "red"
+            , "odd": false
+          }
+        , {   "id": 35
+            , "pos": 34
+            , "win": "34"
+            , "color": "black"
+            , "odd": true
+          }
+        , {   "id": 36
+            , "pos": 35
+            , "win": "35"
+            , "color": "red"
+            , "odd": true
+          }
+        , {   "id": 37
+            , "pos": 36
+            , "win": "36"
+            , "color": "black"
+            , "odd": false
+          }
+      ]
   }
 }

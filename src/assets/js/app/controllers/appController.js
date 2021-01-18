@@ -137,7 +137,7 @@ define([
     try {
       var retResult = JSON.parse(response.responseText);
       return retResult;
-    }catch (err) {
+    } catch (err) {
       console.error('Cannot parse "responseText"! ERROR_MESSAGE = ', typeof(err), err);
     };
 
@@ -367,12 +367,16 @@ define([
       .tmpl(winObj)
       .prependTo(winContainer);
 
-      // STEP GAUGE
-/*  $('#win_gauge')
-      .trigger('configure', {'angleOffset': oRange.angleOffset})
+
+    // STEP GAUGE
+    $('#win_gauge')
+      .trigger('configure', {
+        angleOffset: oRange.angleOffset
+      })
       .val( oRange.steps )
       .trigger('change');
-    $('#step-num').text(winObj.posnum); */
+    $('#step-num').text(winObj.posnum);
+
 
     gamePlay.push(winObj);
     $('#records-num-holder').text(goWinLast.posnum);
@@ -448,7 +452,9 @@ define([
           , 'color': '#' + (colorIndex > 0 ? 'fff' : '000')
         })
         .appendTo(freqsContainer);
+
     };
+
     var o = {
         step:  'Total'
       , steps: totalSteps
@@ -592,6 +598,7 @@ define([
       , iCurr   = _.indexOf(gaRoulEuro, oCurr)
       , iPrev   = ((!!oPrev && 'object' === typeof(oPrev)) ? _.indexOf(gaRoulEuro, oPrev) : 0)
     ;
+
     var Diff      = iCurr - iPrev
       , DiffAbs   = Math.abs(Diff)
       , DiffRight = 0
@@ -601,7 +608,7 @@ define([
     if (Diff > 0) {
       DiffRight = DiffAbs;
       DiffLeft  = lRoul - DiffAbs;
-    }else{
+    } else {
       DiffLeft  = DiffAbs;
       DiffRight = lRoul - DiffAbs;
     };
@@ -733,10 +740,10 @@ define([
       .toggleClass('grow-50', false)
       .find('.w-value')
       .text('n/a')
-      .toggleClass('bg-red', false)
-      .toggleClass('bg-black', false)
-      .toggleClass('bg-green', false)
-      .toggleClass('matched', false);
+      .toggleClass('bg-red',    false)
+      .toggleClass('bg-black',  false)
+      .toggleClass('bg-green',  false)
+      .toggleClass('matched',   false);
   };
 
 
@@ -799,15 +806,15 @@ define([
   //- RESET ALL PREDICTORS VALUES TO DEFAULTS -
   //-------------------------------------------
   function resetPredictors () {
-      $('.box-stats-predictor')
-          .toggleClass('grow-50', false)
-          .find('.w-value')
-          .text('n/a')
-          .toggleClass('bg-red', false)
-          .toggleClass('bg-black', false)
-          .toggleClass('bg-green', false)
-          .toggleClass('matched', false)
-      ;
+    $('.box-stats-predictor')
+      .toggleClass('grow-50',   false)
+      .find('.w-value')
+      .text('n/a')
+      .toggleClass('bg-red',    false)
+      .toggleClass('bg-black',  false)
+      .toggleClass('bg-green',  false)
+      .toggleClass('matched',   false)
+    ;
   };
 
 
@@ -842,59 +849,59 @@ define([
        });
 
 
-          dfdPredict
-              .done( function (loPredict) {
+      dfdPredict
+        .done( function (loPredict) {
 
-                  var widgetOffset =  Number(oParams.stage)
-                    , widgetSteps =   Number(oParams.steps)
-                    , widgetWin   =   Number(loPredict.win)
-                    , winLeft     =   Number(loPredict.predicts.left.win)
-                    , winRight    =   Number(loPredict.predicts.right.win)
-                    , okMatchL    =   (curWin == winLeft)  || false
-                    , okMatchR    =   (curWin == winRight) || false
-                    , okMatch     =   (   0 == widgetOffset
-                                              ?   curStep === widgetSteps
-                                              :   ( okMatchL || okMatchR )
-                                      )
-                  ;
+          var widgetOffset =  Number(oParams.stage)
+            , widgetSteps =   Number(oParams.steps)
+            , widgetWin   =   Number(loPredict.win)
+            , winLeft     =   Number(loPredict.predicts.left.win)
+            , winRight    =   Number(loPredict.predicts.right.win)
+            , okMatchL    =   (curWin == winLeft)  || false
+            , okMatchR    =   (curWin == winRight) || false
+            , okMatch     =   (   0 == widgetOffset
+                ? curStep === widgetSteps
+                : ( okMatchL || okMatchR )
+              )
+          ;
 
-                  //- LEFT or ANTICLOCKWISE
-                  $el.find('.w-value-left')
-                      .first()
-                      .text( winLeft )
-                      .toggleClass('bg-' + loPredict.predicts.left.color, true)
-                      .toggleClass('matched', okMatchL);
+          //- LEFT or ANTICLOCKWISE
+          $el.find('.w-value-left')
+            .first()
+            .text( winLeft )
+            .toggleClass('bg-' + loPredict.predicts.left.color, true)
+            .toggleClass('matched', okMatchL);
 
-                  //- CURRENT WIN-Value
-                  $el.find('.w-value-win')
-                      .first()
-                      .text( widgetWin )
-                      .toggleClass('bg-' + loPredict.color, true)
-                      .toggleClass('matched', okMatch);
+          //- CURRENT WIN-Value
+          $el.find('.w-value-win')
+            .first()
+            .text( widgetWin )
+            .toggleClass('bg-' + loPredict.color, true)
+            .toggleClass('matched', okMatch);
 
-                  //- RIGHT or CLOCKWISE
-                  $el.find('.w-value-right')
-                      .first()
-                      .text( winRight )
-                      .toggleClass('bg-' + loPredict.predicts.right.color, true)
-                      .toggleClass('matched', okMatchR);
+          //- RIGHT or CLOCKWISE
+          $el.find('.w-value-right')
+            .first()
+            .text( winRight )
+            .toggleClass('bg-' + loPredict.predicts.right.color, true)
+            .toggleClass('matched', okMatchR);
 
-                  // HIGHLIGHT PREDICTOR WIDGET THAT HAVE MATCHES WITH Current WIN
-                  $el.toggleClass('grow-50', okMatch)
-                      .toggleClass('matched', okMatch);
+          // HIGHLIGHT PREDICTOR WIDGET THAT HAVE MATCHES WITH Current WIN
+          $el.toggleClass('grow-50', okMatch)
+            .toggleClass('matched', okMatch);
 
-                  // console.groupEnd( $el.attr('id') );
+          // console.groupEnd( $el.attr('id') );
 
-                  if (idx === (gaPredictors.length - 1)) {
-                      // console.groupEnd('updatePredictors');
-                      dfdResult.resolve(loPredict);
-                  };
+          if (idx === (gaPredictors.length - 1)) {
+            // console.groupEnd('updatePredictors');
+            dfdResult.resolve(loPredict);
+          };
 
-              });
+        });
 
-      });
+    });
 
-      return dfdResult.promise();
+    return dfdResult.promise();
   };
 
 

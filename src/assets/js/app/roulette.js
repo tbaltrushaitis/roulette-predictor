@@ -3,7 +3,7 @@
 ;(function ($) {
 
   var init = function () {
-    console.log('INIT');
+    console.log('Roulette INIT');
   };
 
   //  Fetch Roulettes Config
@@ -25,12 +25,12 @@
     };
 
     return {
-        error: true
-      , message: 'Cannot get Roulettes Config from JSON file.'
+        error:    true
+      , message:  'Cannot get Roulettes Config from JSON file.'
     };
   };
 
-  console.timeStamp('Roulette READY!');
+  console.log('Roulette READY!');
 
   return {
     fetchRoulettesConfig: fetchRoulettesConfig

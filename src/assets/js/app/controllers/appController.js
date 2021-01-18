@@ -37,33 +37,33 @@ define([
             , perc:  0
             , total: 0
           }
-        , 'red': {
-              'count': 0
-            , 'perc':  0
+        , red: {
+              count: 0
+            , perc:  0
           }
-        , 'black': {
-              'count': 0
-            , 'perc':  0
+        , black: {
+              count: 0
+            , perc:  0
           }
-        , 'zero': {
-              'count': 0
-            , 'perc':  0
+        , zero: {
+              count: 0
+            , perc:  0
           }
-        , 'odd': {
-              'count': 0
-            , 'perc':  0
+        , odd: {
+              count: 0
+            , perc:  0
           }
-        , 'even': {
-              'count': 0
-            , 'perc':  0
+        , even: {
+              count: 0
+            , perc:  0
           }
-        , 'low': {
-              'count': 0
-            , 'perc':  0
+        , low: {
+              count: 0
+            , perc:  0
           }
-        , 'high': {
-              'count': 0
-            , 'perc':  0
+        , high: {
+              count: 0
+            , perc:  0
           }
       }
     , defOpts = {
@@ -79,7 +79,7 @@ define([
           min: 0
         , max: stepsLimit * 2 - 1
       }
-    , rangesChart = undefined
+    , rangesChart     = undefined
     , rangesChartData = undefined
   ;
 
@@ -101,10 +101,12 @@ define([
     , '299617'
   ];
 
+
   //--------------------
   //- START CONTROLLER -
   //--------------------
   function start () {
+
     fetchRoulettesConfig();
     initPlugins();
     resetGame();
@@ -136,12 +138,12 @@ define([
       var retResult = JSON.parse(response.responseText);
       return retResult;
     }catch (err) {
-      console.error('Cannot parse responseText! ERROR = ', typeof(err), err);
+      console.error('Cannot parse "responseText"! ERROR_MESSAGE = ', typeof(err), err);
     };
 
     return {
-        error: true
-      , message: 'Cannot get Content from [' + url + '] file.'
+        error:    true
+      , message:  `Cannot get Content from: [${url}]`
     };
   };
 
@@ -170,8 +172,8 @@ define([
     };
 
     return {
-        error: true
-      , message: 'Cannot get Roulettes Config from ' + dataUrl + ' file.'
+        error:    true
+      , message:  'Cannot get Roulettes Config from ' + dataUrl + ' file.'
     };
   };
 
@@ -183,6 +185,7 @@ define([
     var rangesCanvas = document.getElementById('chart-steps-freqs').getContext('2d');
 
     $('.knob').knob();
+
 
     //----------------------------
     //- RANGES FREQUENCIES CHART -

@@ -8,6 +8,7 @@ define([
     'jquery'
   , 'appController'
 ]
+
 // DOM ready
 , function ($, appController) {
   'use strict';
@@ -20,4 +21,5 @@ define([
       loController.start();
       console.log('after: START CONTROLLER');
   });
+
 });

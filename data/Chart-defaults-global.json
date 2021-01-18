@@ -1,43 +1,48 @@
-{   "animation": false
-  , "animationSteps": 60
-  , "animationEasing": "zoomIn"
-  , "animationEasing1": "easeOutQuart"
-  , "datasetFill": true
-  , "showScale": true
-  , "scaleOverride": false
-  , "scaleSteps": null
-  , "scaleStepWidth": null
-  , "scaleStartValue": null
-  , "scaleLineColor": "rgba(0,0,0,.1)"
-  , "scaleLineWidth": 1
-  , "scaleShowLabels": true
-  , "scaleLabel": "<%= value + '%' %>"
-  , "scaleIntegersOnly": false
-  , "scaleBeginAtZero": false
-  , "scaleFontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-  , "scaleFontSize": 12
-  , "scaleFontStyle": "normal"
-  , "scaleFontColor": "#666"
-  , "responsive": true
-  , "maintainAspectRatio": false
-  , "showTooltips": true
-  , "customTooltips": false
-  , "tooltipEvents": ["mousemove", "touchstart", "touchmove"]
-  , "tooltipFillColor": "rgba(0,0,0,0.8)"
-  , "tooltipFontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-  , "tooltipFontSize": 14
-  , "tooltipFontStyle": "normal"
-  , "tooltipFontColor": "#fff"
+{
+    "animation":              false
+  , "animationSteps":         60
+  , "animationEasing":        "zoomIn"
+  , "animationEasing1":       "easeOutQuart"
+  , "datasetFill":            true
+  , "showScale":              true
+  , "scaleOverride":          false
+  , "scaleSteps":             null
+  , "scaleStepWidth":         null
+  , "scaleStartValue":        null
+  , "scaleLineColor":         "rgba(0,0,0,.1)"
+  , "scaleLineWidth":         1
+  , "scaleShowLabels":        true
+  , "scaleLabel":             "<%= value + '%' %>"
+  , "scaleIntegersOnly":      false
+  , "scaleBeginAtZero":       false
+  , "scaleFontFamily":        "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+  , "scaleFontSize":          12
+  , "scaleFontStyle":         "normal"
+  , "scaleFontColor":         "#666"
+  , "responsive":             true
+  , "maintainAspectRatio":    false
+  , "showTooltips":           true
+  , "customTooltips":         false
+  , "tooltipEvents": [
+        "mousemove"
+      , "touchstart"
+      , "touchmove"
+    ]
+  , "tooltipFillColor":       "rgba(0,0,0,0.8)"
+  , "tooltipFontFamily":      "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+  , "tooltipFontSize":        14
+  , "tooltipFontStyle":       "normal"
+  , "tooltipFontColor":       "#fff"
   , "tooltipTitleFontFamily": "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-  , "tooltipTitleFontSize": 14
-  , "tooltipTitleFontStyle": "bold"
-  , "tooltipTitleFontColor": "#fff"
-  , "tooltipYPadding": 6
-  , "tooltipXPadding": 6
-  , "tooltipCaretSize": 8
-  , "tooltipCornerRadius": 6
-  , "tooltipXOffset": 10
-  , "tooltipTemplate-0": "<%if (label) {%><%=label%>: <%}%><%= value %>"
-  , "tooltipTemplate": "<%= label %>: <%= value %>"
+  , "tooltipTitleFontSize":   14
+  , "tooltipTitleFontStyle":  "bold"
+  , "tooltipTitleFontColor":  "#fff"
+  , "tooltipYPadding":      6
+  , "tooltipXPadding":      6
+  , "tooltipCaretSize":     8
+  , "tooltipCornerRadius":  6
+  , "tooltipXOffset":       10
+  , "tooltipTemplate-0":    "<%if (label) {%><%=label%>: <%}%><%= value %>"
+  , "tooltipTemplate":      "<%= label %>: <%= value %>"
   , "multiTooltipTemplate": "<%= value %>"
 }

@@ -23,25 +23,27 @@ define([
     , dfdPageRender = $.Deferred()
   ;
 
-  console.timeStamp('START INDEX');
+  console.log(`START INDEX`);
 
-  var Factory    = new (require('Factory'))
+  // Create instance of Dispatcher
+  let Factory    = new (require('Factory'))
     , Dispatcher = Factory.createModule('Dispatcher')
   ;
 
   // Init Dispatcher
   // var Dispatcher = new (require('Dispatcher'));
 
+  //  Create Dispatcher baswed on BackBone.Model
   Dispatcher.Model = new (bb.Model.extend({
     initialize: function () {
       this.items = new (bb.Collection.extend({}));
     }
   }));
   Dispatcher.Config = new (bb.Model.extend({}));
-  console.timeStamp('START DISPATCHER');
+  console.log('[app/index] START DISPATCHER');
 
-  console.info('Lets load a piece of data ..');
-  Dispatcher.Config = Dispatcher.getConfig({route: 'data', target: 'user-001.json'});
+  console.info('[app/index] Lets load a piece of data ..');
+  Dispatcher.Config = Dispatcher.getConfig({route: 'data', target: 'roulettes.json'});
 
   console.log(Dispatcher.Config.get());
 });

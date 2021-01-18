@@ -4,6 +4,7 @@ define([
     'jquery'
   , 'underscore'
 ]
+
 // Dependencies ready
 , function ($, _) {
 
@@ -64,13 +65,14 @@ define([
 
         //  Apply DEFAULT class OPTIONS
         var loaded  = $.when(self.Load())
-                       .then(function (objSelf) {
-                        return objSelf;
-                      });
+          .then(function (objSelf) {
+            return objSelf;
+          }
+        );
 
         setTimeout(function workInit () {
           if ('pending' === loaded.state()) {
-            console.log('\tInit ' + self._entity + ' ... ', i++);
+            console.log(` Init ${self._entity} ... `, i++);
             if (i <= 5) {
               setTimeout(workInit, 100);
             }
@@ -138,22 +140,24 @@ define([
         var self    = this
           , lowType = (true === !!sType ? sType : 'information').toLowerCase()
         ;
-        console.timeStamp(self._entity + '[' + sType + ']' + ':\t' + sText);
+        console.log(self._entity + '[' + sType + ']' + ':\t' + sText);
       }
 
       //  Send AJAX Request
     , sendRequest: function (requestData) {
-        // console.log("sendRequest(requestData):", requestData);
+        console.log(`sendRequest(${typeof requestData}):`, requestData);
         var self      = this
           , dfdMethod = $.Deferred()
-          , defOpts   = {   headers: {
-                              'X-Powered-By': 'tbaltrushaitis'
-                            }
-                          , point: '/'
-                          , route:  'data'
-                          , target: 'roulette.json'
-                        }
-          , o           = _.extendOwn(defOpts, ('object' === typeof(requestData) ? requestData : {}))
+          , defOpts   = {
+                headers: {
+                  'X-Powered-By': window.atob("dGJhbHRydXNoYWl0aXNAZ21haWwuY29t")
+                }
+              , point:  '/'
+              , route:  'data'
+              , target: 'roulette.json'
+            }
+          // , o           = _.extendOwn(defOpts, ('object' === typeof(requestData) ? requestData : {}))
+          , o           = Object.assign(defOpts, ('object' === typeof(requestData) ? requestData : {}))
           , requestURL  = ((o.url || o.point)
                           + '/'
                           + o.route
@@ -161,29 +165,31 @@ define([
                           + o.target
                           )
           , dataResponse =  $.ajax({
-                                url:  requestURL
-                              , data: o.data
-                              , type: o.method || 'GET'
-                              , datatype: (o.datatype || 'json')
-                              , async: false
-                              , beforeSend: function (req) {
-                                  if (o.headers) {
-                                    for (name in o.headers) {
-                                      if (o.headers[name]) {
-                                        req.setRequestHeader(name, o.headers[name]);
-                                      }
-                                    }
-                                  }
-                                }
-                            }).responseText;
-        console.groupCollapsed(self._entity + '.sendRequest');
+              url:      requestURL
+            , data:     o.data
+            , type:     o.method || 'GET'
+            , datatype: (o.datatype || 'json')
+            , async:    false
+            , beforeSend: function (req) {
+                if (o.headers) {
+                  for (name in o.headers) {
+                    if (o.headers[name]) {
+                      req.setRequestHeader(name, o.headers[name]);
+                    }
+                  }
+                }
+              }
+          }).responseText;
+
+        console.groupCollapsed(`${self._entity}.sendRequest`);
         var dataJSON = (true === !!dataResponse)
-                        ? JSON.parse(dataResponse)
-                        : {message: 'Request FAILED'};
+          ? JSON.parse(dataResponse)
+          : {message: 'Request FAILED'}
+        ;
 
         $.when(dataResponse, dataJSON)
          .then(function (lcData, loData) {
-            console.groupEnd(self._entity + '.sendRequest');
+            console.groupEnd(`${self._entity}.sendRequest`);
             dfdMethod.resolve(loData);
         });
 

@@ -1,52 +1,35 @@
-{   "name": "roulette-predictor"
-  , "version": "0.0.1"
-  , "title": "Casino Roulette Predictor"
+{   "name":     "roulette-predictor"
+  , "version":  "0.0.1"
+  , "title":    "Casino Roulette Predictor"
   , "description": "Online Casino Roulette Analyzer and Predictor"
-  , "keywords": [
-        "casino"
-      , "roulette"
-      , "predictor"
-      , "javascript casino analyzer"
-    ]
-  , "homepage": "http://bit.ly/roulette-predictor"
-  , "author": {
-        "name": "Baltrushaitis Tomas"
-      , "url": "https://github.com/tbaltrushaitis"
-    }
-  , "licenses": [
-      {   "type": "MIT"
-        , "url": "http://tbaltrushaitis.mit-license.org/"
-      }
-    ]
+  , "main": "index.html"
   , "scripts": {
       "build": "gulp build"
     }
   , "repository": {
         "type": "git"
-      , "url": "https://github.com/tbaltrushaitis/roulette-predictor.git"
+      , "url":  "https://github.com/tbaltrushaitis/roulette-predictor.git"
     }
-  , "main": "index.html"
   , "dependencies": {
-        "bower":            "^1.8.2"
-      , "config":           "^1.29.4"
-      , "dateformat":       "^3.0.2"
-      , "gulp":             "^3.9.1"
-      , "gulp-cli":         "^2.0.1"
-      , "gulp-changed":     "^3.2.0"
-      , "gulp-clean-css":   "^3.9.2"
-      , "gulp-filter":      "^5.1.0"
-      , "gulp-if":          "^2.0.2"
-      , "gulp-rename":      "^1.2.2"
-      , "gulp-directory-sync": "^1.2.3"
-      , "gulp-require-tasks": "^1.2.1"
-      , "gulp-uglify":      "^3.0.0"
-      , "main-bower-files": "^2.13.1"
-      , "merge-stream":     "^1.0.0"
-      , "read-config":      "^2.0.0"
-      , "vinyl-paths":      "^2.1.0"
+        "bower":                "^1.8.2"
+      , "config":               "^1.29.4"
+      , "dateformat":           "^3.0.2"
+      , "gulp":                 "^3.9.1"
+      , "gulp-cli":             "^2.0.1"
+      , "gulp-changed":         "^3.2.0"
+      , "gulp-clean-css":       "^3.9.2"
+      , "gulp-filter":          "^5.1.0"
+      , "gulp-if":              "^2.0.2"
+      , "gulp-rename":          "^1.2.2"
+      , "gulp-directory-sync":  "^1.2.3"
+      , "gulp-require-tasks":   "^1.2.1"
+      , "gulp-uglify":          "^3.0.0"
+      , "main-bower-files":     "^2.13.1"
+      , "merge-stream":         "^1.0.0"
+      , "read-config":          "^2.0.0"
+      , "vinyl-paths":          "^2.1.0"
     }
-  , "devDependencies": {
-    }
+  , "devDependencies": {}
   , "options": {
       "bower": {
           "debugging": true
@@ -129,4 +112,21 @@
         , "colors":     true
       }
     }
+  , "homepage": "http://bit.ly/roulette-predictor"
+  , "author": {
+        "name": "Baltrushaitis Tomas"
+      , "url":  "https://github.com/tbaltrushaitis"
+    }
+  , "keywords": [
+        "analyzer"
+      , "casino"
+      , "roulette"
+      , "predictor"
+      , "javascript casino analyzer"
+    ]
+  , "licenses": [
+      {   "type": "MIT"
+        , "url":  "http://tbaltrushaitis.mit-license.org/"
+      }
+    ]
 }

@@ -5,7 +5,7 @@
 
 ![Gameplay Screenshot](assets/img/gameplay-1928-won.png)
 
-Casino Roulette Analyzer and Predictor :yen: :dollar: :pound: :euro:
+:game_die: Casino Roulette :slot_machine: Analyzer and Predictor :coin:
 
 `online` `casino` `roulette` `predictor` `real-time`
 
@@ -40,11 +40,9 @@ $ make
  - [GitHub / Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
  - [BitBucket Markdown Howto](https://bitbucket.org/tutorials/markdowndemo)
  - [Creating an Automated Build](https://docs.docker.com/docker-hub/builds/)
- - [Linking containers](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks.md)
- - [Cross-host linking containers](https://docs.docker.com/engine/admin/ambassador_pattern_linking.md)
 
 ---
 
 > :calendar: Developed in **March 2016**
 
-:scorpius:
+:scorpion:

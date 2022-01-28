@@ -16,12 +16,12 @@ define([
 
   'use strict';
 
-  var dfdConfig     = $.Deferred()
-    , dfdFactory    = $.Deferred()
-    , dfdDispatcher = $.Deferred()
-    , dfdPageData   = $.Deferred()
-    , dfdPageRender = $.Deferred()
-  ;
+  // var dfdConfig     = $.Deferred()
+  //   , dfdFactory    = $.Deferred()
+  //   , dfdDispatcher = $.Deferred()
+  //   , dfdPageData   = $.Deferred()
+  //   , dfdPageRender = $.Deferred()
+  // ;
 
   console.log(`START INDEX`);
 
